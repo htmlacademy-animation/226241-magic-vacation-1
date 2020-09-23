@@ -30,6 +30,8 @@
 }
 
 .form__field {
+  position: relative;
+  right: -30px;
   flex: none;
   margin-right: 3rem;
   padding: 0 5.6rem;
@@ -43,6 +45,9 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  opacity: 0;
+  transition-property: right, opacity;
+  transition-duration: 1s;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -76,6 +81,11 @@
     height: 4rem;
     font-size: 1.6rem;
   }
+}
+
+.screen--game.active .form__field {
+  right: 0;
+  opacity: 1;
 }
 
 .form__button {

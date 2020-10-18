@@ -1,0 +1,17 @@
+.page-header {
+  opacity: 0;
+  transition: opacity cubic-bezier(0.25, 0.85, 0.5, 0.8) 1.5s;
+}
+
+.js-content-is-loaded .page-header {
+  opacity: 1;
+}
+
+.page-header__logo {
+  transform: translateX(-30px);
+  transition: transform cubic-bezier(0.25, 0.85, 0.5, 0.8) 1.5s;
+}
+
+.js-content-is-loaded .page-header__logo {
+  transform: translateX(0);
+}

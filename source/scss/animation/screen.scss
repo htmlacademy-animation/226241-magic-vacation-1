@@ -1,62 +1,11 @@
-.page-header__menu {
-  a {
-    transition: color 0.3s;
-  }
-
-  a::after {
-    display: block;
-    width: 0;
-    transition: width 0.3s;
-  }
-
-  a.active::after,
-  a:hover::after,
-  a:focus::after {
-    width: 100%;
-  }
-}
-
-
-.social-block__toggler {
-  transition: color 0.3s;
-
-  &::before {
-    transition-property: width, height;
-    transition-duration: 0.3s;
-  }
-}
-
-.social-block__list li {
-  opacity: 0;
-  transition-property: opacity;
-
-  &:nth-child(1) {
-    transition-duration: 1s;
-  }
-
-  &:nth-child(2) {
-    transition-duration: 2s;
-  }
-
-  &:nth-child(3) {
-    transition-duration: 3s;
-  }
-}
-
-.social-block:hover .social-block__list li {
-  opacity: 1;
-}
-
-.social-block__link {
-  transition-property: color, border-color;
-  transition-duration: 0.3s;
-}
-
-
 .screen--hidden {
   display: flex;
-  opacity: 0;
-  visibility: hidden;
+
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 

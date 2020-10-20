@@ -1,0 +1,21 @@
+.page-header__menu {
+  a {
+    transition: color 0.3s;
+  }
+
+  a::after {
+    right: 0;
+    left: auto;
+    display: block;
+    width: 0;
+    transition: width 0.3s;
+  }
+
+  a.active::after,
+  a:hover::after,
+  a:focus::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}

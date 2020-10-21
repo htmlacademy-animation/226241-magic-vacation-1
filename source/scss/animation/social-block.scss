@@ -1,0 +1,34 @@
+.social-block__toggler {
+  transition: color 0.3s;
+
+  &::before {
+    transition-property: width, height;
+    transition-duration: 0.3s;
+  }
+}
+
+.social-block__list li {
+  opacity: 0;
+  transition-property: opacity;
+
+  &:nth-child(1) {
+    transition-duration: 1s;
+  }
+
+  &:nth-child(2) {
+    transition-duration: 2s;
+  }
+
+  &:nth-child(3) {
+    transition-duration: 3s;
+  }
+}
+
+.social-block:hover .social-block__list li {
+  opacity: 1;
+}
+
+.social-block__link {
+  transition-property: color, border-color;
+  transition-duration: 0.3s;
+}

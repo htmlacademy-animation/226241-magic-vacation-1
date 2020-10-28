@@ -1,0 +1,13 @@
+.screen--game .form__field {
+  transform: scaleX(0);
+  transform-origin: 100%;
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+}
+
+.screen--game.active .form__field {
+  transform: scaleX(1);
+  opacity: 1;
+}

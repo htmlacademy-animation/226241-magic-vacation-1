@@ -1,0 +1,11 @@
+.screen--intro .intro__message {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+}
+
+.screen--intro.active .intro__message {
+  transform: translateY(0);
+  opacity: 1;
+}

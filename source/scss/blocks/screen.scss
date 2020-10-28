@@ -7,7 +7,13 @@
   overflow: hidden;
 
   &--hidden {
-    display: none;
+    display: flex;
+
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -299,6 +305,10 @@
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
   }
+}
+
+.screen--prizes {
+  background-color: $c-dark;
 }
 
 .screen--game {

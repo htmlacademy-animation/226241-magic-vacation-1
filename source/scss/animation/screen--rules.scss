@@ -1,0 +1,86 @@
+.screen--rules.active .rules__item p {
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.screen--rules.active .rules__item::before {
+  transform: scale(0);
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@for $i from 2 through 4 {
+  .screen--rules.active .rules__item:nth-child(#{$i}) {
+    &::before {
+      animation-delay: #{$i * 0.25}s;
+    }
+    p {
+      animation-delay: #{$i * 0.25}s;
+    }
+  }
+}
+
+.screen--rules .rules__link {
+  transform: scaleX(1);
+  transform-origin: 100%;
+  transition: transform 0.25s, color 0.25s 0.25s;
+}
+
+.screen--rules .rules__link.visually-hidden {
+  transform: scaleX(0);
+  color: transparent;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes bounce {
+  to {
+    transform: scale(1);
+  }
+}
+
+.js-content-is-loaded .screen--rules .rules__lead {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in;
+  transition-duration: 500ms;
+}
+
+.screen--rules.screen--hidden .rules__lead,
+.screen--rules .rules__lead {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: none;
+}
+
+.screen--rules .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--rules .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--rules .text__word > span,
+.screen--rules.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
+}

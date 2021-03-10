@@ -1,0 +1,25 @@
+.form {
+    width: 42.2rem;
+
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 250ms;
+    margin-left: auto;
+}
+
+.form__button {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.active .form,
+.screen--show .form {
+    width: 100%;
+    opacity: 1;
+}
+
+.active .form__button,
+.screen--show .form__button {
+    opacity: 1;
+}

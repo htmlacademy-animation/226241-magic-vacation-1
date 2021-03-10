@@ -1,0 +1,16 @@
+.screen--game .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--game .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--game .text__word > span,
+.screen--game.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
+}

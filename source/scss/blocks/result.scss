@@ -268,3 +268,55 @@
     }
   }
 }
+
+[id="result2"] .result {
+  &__image img[src$="flamingo.png"],
+  &__image img[src$="leaf blue 1.png"],
+  &__image img[src$="leaf blue 2.png"],
+  &__image img[src$="leaf green.png"],
+  &__image img[src$="suitcase.png"] {
+      object-fit: initial;
+      object-position: initial;
+      height: initial;
+      position: absolute;
+  }
+
+  &__image img[src$="flamingo.png"] {
+      width: 335px;
+      top: 50%;
+      right: 50%;
+      margin-top: -17px;
+      margin-right: -29px;
+  }
+
+  &__image img[src$="leaf blue 1.png"] {
+      width: 355px;
+      top: 50%;
+      left: 50%;
+      margin-top: -118px;
+  }
+
+  &__image img[src$="leaf blue 2.png"] {
+      width: 355px;
+      top: 50%;
+      right: 50%;
+      margin-top: 13px;
+      margin-right: 86px;
+  }
+
+  &__image img[src$="leaf green.png"] {
+      width: 425px;
+      top: 50%;
+      left: 50%;
+      margin-top: 53px;
+      margin-left: -44px;
+  }
+
+  &__image img[src$="suitcase.png"] {
+      width: 435px;
+      top: 50%;
+      right: 50%;
+      margin-top: -118px;
+      margin-right: -173px;
+  }
+}

@@ -1,0 +1,32 @@
+.screen--story .slider__item-text {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+}
+
+.screen--story .swiper-slide-next .slider__item-text {
+  transition-delay: 0.3s;
+}
+
+.screen--story.active .swiper-slide .slider__item-text {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.screen--story .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--story .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--story .text__word > span,
+.screen--story.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
+}

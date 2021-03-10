@@ -1,0 +1,31 @@
+.js-content-is-loaded .screen--prizes .prizes__lead {
+    transform: translateY(0);
+    opacity: 1;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in;
+    transition-duration: 500ms;
+}
+
+.screen--prizes.screen--hidden .prizes__lead,
+.screen--prizes .prizes__lead {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: none;
+}
+
+.screen--prizes .text__word {
+    display: inline-block;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+
+.screen--prizes .animated .text__word > span {
+    transform: translate3d(0, 0.15em, 0);
+    display: inline-block;
+}
+
+.screen--prizes .text__word > span,
+.screen--prizes.screen--hidden .text__word > span {
+    transform: translate3d(0, 1.15em, 0);
+    display: inline-block;
+}

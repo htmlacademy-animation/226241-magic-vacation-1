@@ -1,0 +1,159 @@
+.result--prize .result {
+    $timingFunction: ease-in-out;
+
+
+    .js-content-is-loaded &__image [src$="leaf blue 1.png"] {
+        animation-name: leaf-1;
+        animation-duration: 5000ms;
+        animation-timing-function: $timingFunction;
+    }
+
+    .js-content-is-loaded &__image [src$="leaf blue 2.png"] {
+        animation-name: leaf-2;
+        animation-duration: 5000ms;
+        animation-timing-function: $timingFunction;
+    }
+
+    .js-content-is-loaded &__image [src$="leaf green.png"] {
+        animation-name: leaf-green;
+        animation-duration: 4000ms;
+        animation-timing-function: $timingFunction;
+        transform-origin: bottom left;
+    }
+
+    .screen--hidden &__image [src$="leaf blue 1.png"],
+    .screen--hidden &__image [src$="leaf blue 2.png"],
+    .screen--hidden &__image [src$="leaf green.png"],
+    &__image [src$="leaf blue 1.png"],
+    &__image [src$="leaf blue 2.png"],
+    &__image [src$="leaf green.png"] {
+        animation: none;
+    }
+
+    .js-content-is-loaded &__image [src$="flamingo.png"] {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+
+        animation-name: flamingo;
+        animation-duration: 4000ms;
+        animation-delay: 4000ms;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    .screen--hidden &__image [src$="flamingo.png"],
+    &__image [src$="flamingo.png"] {
+        opacity: 0;
+        transform: translateY(200px) rotate(-45deg);
+        transform-origin: right;
+
+        will-change: transform, opacity;
+        transition-property: transform, opacity;
+        transition-duration: 4000ms;
+        transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        animation: none;
+    }
+
+
+    .js-content-is-loaded &__image [src$="suitcase.png"] {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .screen--hidden &__image [src$="suitcase.png"],
+    &__image [src$="suitcase.png"] {
+        opacity: 0;
+        transform: translateY(400px) scale(0);
+
+        will-change: transform, opacity;
+        transition-property: transform, opacity;
+        transition-duration: 2000ms;
+        transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+
+
+    @keyframes leaf-1 {
+        0% {
+            transform: rotate(-6deg);
+            transform-origin: bottom left;
+            opacity: 0;
+        }
+        20% {
+            transform: rotate(0deg);
+        }
+        40% {
+            transform: rotate(-4deg);
+            opacity: 1;
+        }
+        60% {
+            transform: rotate(0deg);
+        }
+        80% {
+            transform: rotate(-2deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes leaf-2 {
+        0% {
+            transform: rotate(6deg);
+            transform-origin: top right;
+            opacity: 0;
+        }
+        20% {
+            transform: rotate(0deg);
+        }
+        40% {
+            transform: rotate(4deg);
+        }
+        50% {
+            opacity: 1;
+        }
+        60% {
+            transform: rotate(0deg);
+        }
+        80% {
+            transform: rotate(2deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes leaf-green {
+        0% {
+            transform: rotate(-3deg);
+            opacity: 0;
+        }
+        20% {
+            transform: rotate(0deg);
+        }
+        40% {
+            transform: rotate(-2deg);
+        }
+        60% {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        80% {
+            transform: rotate(-1deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes flamingo {
+        0% {
+            transform: rotate(0);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+}

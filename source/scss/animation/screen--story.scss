@@ -9,7 +9,8 @@
   transition-delay: 0.3s;
 }
 
-.screen--story.active .swiper-slide .slider__item-text {
+.screen--story.active .swiper-slide-active .slider__item-text,
+.screen--story.active .swiper-slide-next .slider__item-text {
   transform: translateX(0);
   opacity: 1;
 }

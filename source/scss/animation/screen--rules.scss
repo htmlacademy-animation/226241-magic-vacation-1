@@ -52,3 +52,35 @@
     transform: scale(1);
   }
 }
+
+.js-content-is-loaded .screen--rules .rules__lead {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in;
+  transition-duration: 500ms;
+}
+
+.screen--rules.screen--hidden .rules__lead,
+.screen--rules .rules__lead {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: none;
+}
+
+.screen--rules .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--rules .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--rules .text__word > span,
+.screen--rules.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
+}

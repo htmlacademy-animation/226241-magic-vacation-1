@@ -1,3 +1,17 @@
+.js-content-is-loaded .screen--intro .intro__label {
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: 1000ms;
+  transition-delay: 1000ms;
+}
+
+.screen--intro.screen--hidden .intro__label,
+.screen--intro .intro__label {
+  opacity: 0;
+  transition: none;
+}
+
 .screen--intro .intro__message {
   transform: translateY(-20px);
   opacity: 0;
@@ -8,4 +22,26 @@
 .screen--intro.active .intro__message {
   transform: translateY(0);
   opacity: 1;
+}
+
+.intro__title {
+  max-width: 101rem;
+  margin-left: -1rem;
+}
+
+.screen--intro .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--intro .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--intro .text__word > span,
+.screen--intro.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
 }

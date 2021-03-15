@@ -10,6 +10,10 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import body from './modules/body';
 import screenRules from './modules/screen--rules';
+import screenStory from './modules/screen--story';
+import screenIntro from './modules/screen--intro';
+import screenPrizes from './modules/screen--prizes';
+import screenGame from './modules/screen--game';
 
 // init modules
 mobileHeight();
@@ -22,6 +26,10 @@ form();
 social();
 body();
 screenRules();
+screenStory();
+screenIntro();
+screenPrizes();
+screenGame();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

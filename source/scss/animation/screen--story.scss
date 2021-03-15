@@ -14,3 +14,20 @@
   transform: translateX(0);
   opacity: 1;
 }
+
+.screen--story .text__word {
+  display: inline-block;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.screen--story .animated .text__word > span {
+  transform: translate3d(0, 0.15em, 0);
+  display: inline-block;
+}
+
+.screen--story .text__word > span,
+.screen--story.screen--hidden .text__word > span {
+  transform: translate3d(0, 1.15em, 0);
+  display: inline-block;
+}

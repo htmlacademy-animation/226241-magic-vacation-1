@@ -278,10 +278,21 @@
 
       &::after {
         opacity: 1;
-        background-color: $c-purple;
+        background-color: currentColor;
       }
     }
+
+    .color-scheme-blue &:hover,
+    .color-scheme-blue &:focus {
+      color: $c-cyan;
+    }
+
+    .color-scheme-cyan &:hover,
+    .color-scheme-cyan &:focus {
+      color: $c-blue;
+    }
   }
+
 }
 
 .page-header__social {

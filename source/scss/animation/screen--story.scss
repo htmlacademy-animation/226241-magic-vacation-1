@@ -31,3 +31,28 @@
   transform: translate3d(0, 1.15em, 0);
   display: inline-block;
 }
+
+.dom-content-loaded .screen--story .slider__control {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+
+  transition-property: transform, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.dom-content-loaded .screen--story .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.screen--story.screen--hidden .slider__control--prev,
+.screen--story .slider__control--prev {
+  opacity: 0;
+  transform: translateX(-100px) rotate(-180deg);
+}
+
+.screen--story.screen--hidden .slider__control--next,
+.screen--story .slider__control--next {
+  opacity: 0;
+  transform: translateX(100px) rotate(180deg);
+}

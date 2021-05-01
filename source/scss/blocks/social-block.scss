@@ -18,6 +18,14 @@
   color: $c-dark;
   border-radius: 50%;
 
+  .color-scheme-cyan & {
+    color: $c-cyan;
+  }
+
+  .color-scheme-blue & {
+    color: $c-blue;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
   }
@@ -54,18 +62,36 @@
     }
   }
 
+  .color-scheme-blue &:hover,
+  .color-scheme-blue .social-block--active & {
+    color: $c-cyan;
+  }
+
+  .color-scheme-cyan &:hover,
+  .color-scheme-cyan .social-block--active & {
+    color: $c-blue;
+  }
+
   &:focus {
     color: $c-purple;
     outline: none;
 
     &::before {
-      border-color: $c-purple;
+      border-color: currentColor;
     }
 
     & + .social-block__list {
       opacity: 1;
       pointer-events: auto;
     }
+  }
+
+  .color-scheme-blue &:focus {
+    color: $c-cyan;
+  }
+
+  .color-scheme-cyan &:focus {
+    color: $c-blue;
   }
 
   &:active,
@@ -77,6 +103,22 @@
       height: 100%;
       background-color: $c-purple;
       border-color: $c-purple;
+    }
+  }
+
+  .color-scheme-blue &:active,
+  .color-scheme-blue &:active:focus {
+    &::before {
+      background-color: $c-cyan;
+      border-color: $c-cyan;
+    }
+  }
+
+  .color-scheme-cyan &:active,
+  .color-scheme-cyan &:active:focus {
+    &::before {
+      background-color: $c-blue;
+      border-color: $c-blue;
     }
   }
 }
@@ -240,5 +282,53 @@
         height: 10px;
       }
     }
+  }
+}
+
+.color-scheme-blue .social-block__link {
+  @media (max-width: $tablet) and (orientation: portrait) {
+    background-color: $c-blue;
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    background-color: $c-blue;
+  }
+
+  &:hover {
+    color: $c-cyan;
+  }
+
+  &:focus {
+    color: $c-cyan;
+    border-color: $c-cyan;
+  }
+
+  &:active,
+  &:active:focus {
+    color: $c-cyan;
+  }
+}
+
+.color-scheme-cyan .social-block__link {
+  @media (max-width: $tablet) and (orientation: portrait) {
+    background-color: $c-cyan;
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    background-color: $c-cyan;
+  }
+
+  &:hover {
+    color: $c-blue;
+  }
+
+  &:focus {
+    color: $c-blue;
+    border-color: $c-blue;
+  }
+
+  &:active,
+  &:active:focus {
+    color: $c-blue;
   }
 }

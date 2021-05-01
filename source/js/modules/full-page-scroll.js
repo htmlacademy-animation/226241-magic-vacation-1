@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+import changeNavColorScheme from "../utils/change-nav-color-scheme";
 
 export default class FullPageScroll {
   constructor() {
@@ -25,6 +26,7 @@ export default class FullPageScroll {
     if (currentPosition !== this.activeScreen) {
       this.changePageDisplay();
     }
+    changeNavColorScheme();
   }
 
   onUrlHashChanged() {

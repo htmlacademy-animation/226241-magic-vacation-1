@@ -221,6 +221,56 @@
   }
 }
 
+.color-scheme-blue .slider__control {
+  color: $c-blue;
+
+  &:hover {
+    color: $c-blue;
+  }
+
+  &:focus {
+    color: $c-blue;
+    &::before {
+      border-color: $c-blue;
+    }
+  }
+
+  &:active,
+  &:active:focus {
+    color: $c-light;
+
+    &::before {
+      background-color: $c-blue;
+      border-color: $c-blue;
+    }
+  }
+}
+
+.color-scheme-cyan .slider__control {
+  color: $c-cyan;
+
+  &:hover {
+    color: $c-cyan;
+  }
+
+  &:focus {
+    color: $c-cyan;
+    &::before {
+      border-color: $c-cyan;
+    }
+  }
+
+  &:active,
+  &:active:focus {
+    color: $c-light;
+
+    &::before {
+      background-color: $c-cyan;
+      border-color: $c-cyan;
+    }
+  }
+}
+
 .slider__pagination.swiper-pagination {
   position: absolute;
   bottom: 2.8rem;

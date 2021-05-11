@@ -10307,6 +10307,8 @@ class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+
+    this.footerTogglers = document.querySelectorAll(`.js-footer-toggler`);
   }
 
   init() {
@@ -10323,12 +10325,14 @@ class FullPageScroll {
       this.changePageDisplay();
     }
     Object(_utils_change_nav_color_scheme__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    this.hideMobileFooter();
   }
 
   onUrlHashChanged() {
     const newIndex = Array.from(this.screenElements).findIndex((screen) => location.hash.slice(1) === screen.id);
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
     this.changePageDisplay();
+    this.hideMobileFooter();
   }
 
   changePageDisplay() {
@@ -10351,6 +10355,17 @@ class FullPageScroll {
     if (activeItem) {
       this.menuElements.forEach((item) => item.classList.remove(`active`));
       activeItem.classList.add(`active`);
+    }
+  }
+
+  hideMobileFooter() {
+    if (this.footerTogglers.length) {
+      this.footerTogglers.forEach((elem) => {
+        let footer = elem.parentNode;
+        if (footer.classList.contains(`screen__footer--full`)) {
+          footer.classList.remove(`screen__footer--full`);
+        }
+      });
     }
   }
 

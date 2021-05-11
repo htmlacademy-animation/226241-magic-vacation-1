@@ -3829,6 +3829,31 @@ img {
   100% {
     transform: rotate(0); } }
 
+.screen--result.screen--hidden .result--negative .result__button,
+.screen--result .result--negative .result__button {
+  opacity: 0;
+  transform: scale(0); }
+
+.dom-content-loaded .result--negative .result__button {
+  opacity: 1;
+  transform: scale(1);
+  transition-property: transform, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms; }
+
+.screen--result.screen--hidden .result--negative .result__button span,
+.screen--result .result--negative .result__button span {
+  opacity: 0;
+  transform: translateX(100px) rotate(180deg); }
+
+.dom-content-loaded .result--negative .result__button span {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+  transition-property: transform, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1000ms;
+  transition-delay: 250ms; }
+
 .form {
   width: 42.2rem;
   transition-property: width;

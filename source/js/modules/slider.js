@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import changeNavColorScheme from "../utils/change-nav-color-scheme";
 
 export default () => {
   let storySlider;
@@ -17,6 +18,7 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            setTimeout(changeNavColorScheme, 200);
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
             } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
@@ -51,6 +53,7 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            setTimeout(changeNavColorScheme, 200);
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
             } else if (storySlider.activeIndex === 2) {

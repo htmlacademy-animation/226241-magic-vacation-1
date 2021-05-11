@@ -1,3 +1,5 @@
+import changeNavColorScheme from "../utils/change-nav-color-scheme";
+
 export default () => {
   let header = document.querySelector(`.js-header`);
   let menuToggler = document.querySelector(`.js-menu-toggler`);
@@ -21,6 +23,7 @@ export default () => {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
       }
+      setTimeout(changeNavColorScheme, 200);
     });
   }
 };
